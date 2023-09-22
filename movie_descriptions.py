@@ -49,7 +49,7 @@ print(response)
 
 # Podemos iterar sobre todas las películas para generar la descripción. Dado que esto 
 #puede tomar bastante tiempo, el archivo con las descripciones para todas las películas es movie_descriptions.json
-"""
+
 for i in range(len(movies)):
   prompt =  f"{instruction} Has una descripción de la película {movies[i]['title']}"
   response = get_completion(prompt)
@@ -62,6 +62,6 @@ with open(file_path, 'w') as json_file:
     json.dump(movies, json_file, indent=4)  # The 'indent' parameter is optional for pretty formatting
 
 print(f"Data saved to {file_path}")
-"""
+
 
 
